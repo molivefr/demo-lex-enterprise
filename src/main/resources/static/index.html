@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Lex Enterprise API demo</title>
+    <link rel="icon" type="image/x-icon" href="/images/Lex-favicon.ico">
+</head>
+</html>
+<body>
+    <div style="display:flex;flex-direction:row;column-gap:20px">
+        <img src="images/LexEnterprise_logo.png" style="width:160px;height:100px" >
+        <h3 style="align-self:center">Workflow Manager API integration example</h3>
+    </div>
+    <br/>
+    <br/>
+    <div style="width:35%;margin:auto">
+        <div style="display:grid;grid-template-columns:repeat(2, 1fr);grid-gap:10px;grid-auto-rows:minmax(30px, auto)">
+            <div style="grid-column:1;grid-row:1;border-right:2px solid">
+                <h3 style="text-align:center">Contract issuer</h3>
+            </div>
+            <div style="grid-column:2;grid-row:1">
+                <h3 style="text-align:center">Signer</h3>
+            </div>
+            <div style="grid-column:1;grid-row:2;border-right:2px solid">
+                <div style="display:flex;flex-direction:column;row-gap:10px">
+                    <button onClick="createWf()" style="align-self:center">1 - Create a workflow with one signature step</button>
+                    <input id="fileinput" type="file" name="files" style="align-self:center;display:none" />
+                    <label id="fileinputlabel" for="fileinput" style="align-self:center;background-color:rgb(239, 239, 239);padding:1px 5px 1px 5px;border:1px solid;border-radius:3px">2 - Add a document to the workflow</label>
+                    <button onClick="createViewer()" style="align-self:center">3 - Place the signature PAD on the document</button>
+                    <button onClick="startWorkflow()" style="align-self:center">4 - Start the workflow</button>
+                </div>
+            </div>
+            <div style="grid-column:1;grid-row:3;border-right:2px solid">
+                <div style="display:flex;flex-direction:column;row-gap:10px">
+                    <p></p>
+                </div>
+            </div>
+            <div style="grid-column:2;grid-row:3">
+                <div style="display:flex;flex-direction:column;row-gap:10px">
+                    <button onClick="createSignatureLink()" style="align-self:center">5 - Sign the document</button>
+                </div>
+            </div>
+            <div style="grid-column:1;grid-row:4;border-right:2px solid">
+                <div style="display:flex;flex-direction:column;row-gap:10px">
+                    <button onClick="checkStatus()" style="align-self:center">6 - Check the workflow status</button>
+                </div>
+            </div>
+            </div>
+                <div style="grid-column:1 / 2;grid-row:5">
+                    <div style="display:flex;flex-direction:column;row-gap:10px;padding-top:10px">
+                        <button onClick="downloadDocs()" style="align-self:center">7 - Download signed documents</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <br/>
+    <br/>
+    <div id="result" style="display:flex;flex-direction:column">
+    </div>
+    <script type="text/javascript" src="js/demo.js"></script>
+</body>
