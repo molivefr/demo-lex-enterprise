@@ -1,6 +1,6 @@
 # Installation instructions
 
-## Create a config.json file an place it in src/main/resources/static
+## Create a config.json file and place it in src/main/resources/static
 
 The config.json file must have the folloving structure
 
@@ -20,5 +20,10 @@ Build the docker image
 Run the container
 
     docker run -d -p 8080:8080 wm-api-demo
+
+# Test the application
+
+Point your browser to {your host url}:{your port}
+
 
 
